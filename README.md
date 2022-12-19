@@ -11,8 +11,8 @@ Your project's description...
 npm i
 ```
 
-## Tests
-https://feature-test-lighthouse--salvasite-project-franklin--salvamolaso.hlx.page/
+URL for testing:
+- https://feature-test-lighthouse--salvasite-project-franklin--salvamolaso.hlx.page/
 
 ```sh
 npm tst
