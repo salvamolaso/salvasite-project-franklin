@@ -2,8 +2,8 @@
 Your project's description...
 
 ## Environments
-- Preview: https://main--{repo}--{owner}.hlx.page/
-- Live: https://main--{repo}--{owner}.hlx.live/
+- Preview: https://main--salvasite-project-franklin--salvamolaso.hlx.page/
+- Live: https://main--salvasite-project-franklin--salvamolaso.hlx.live/
 
 ## Installation
 
@@ -12,6 +12,7 @@ npm i
 ```
 
 ## Tests
+https://main--salvasite-project-franklin--salvamolaso.hlx.page/
 
 ```sh
 npm tst
