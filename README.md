@@ -12,7 +12,7 @@ npm i
 ```
 
 ## Tests
-https://main--salvasite-project-franklin--salvamolaso.hlx.page/
+https://feature-test-lighthouse--salvasite-project-franklin--salvamolaso.hlx.page/
 
 ```sh
 npm tst
