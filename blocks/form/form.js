@@ -189,17 +189,11 @@ async function createForm(formURL) {
   fill(form);
   return (form);
 }
-/**
+
 export default async function decorate(block) {
   const form = block.querySelector('a[href$=".json"]');
   addInViewAnimationToSingleElement(block, 'fade-up');
   if (form) {
     form.replaceWith(await createForm(form.href));
   }
-}
- */
-export default async function decorate(block) {
-  const p = document.createElement('p');
-  p.textContent='salvaaaaa';
-  block.append(p);
 }
