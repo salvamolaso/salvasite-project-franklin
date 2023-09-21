@@ -47,11 +47,57 @@ function buildAutoBlocks(main) {
 // eslint-disable-next-line import/prefer-default-export
 export function decorateMain(main) {
   // hopefully forward compatible button decoration
-  decorateButtons(main);
-  decorateIcons(main);
   buildAutoBlocks(main);
+  decorateIcons(main);
   decorateSections(main);
+
+  customDecorateButtons(main);
+
+  //decorateButtons(main);
   decorateBlocks(main);
+}
+
+export function customDecorateButtons(block = document) {
+  const noButtonBlocks = ['cards', 'pagination', 'card-list'];
+  block.querySelectorAll(':scope a').forEach((a) => {
+    a.title = a.title || a.textContent;
+    const $block = a.closest('div.section > div > div');
+    let blockName;
+    if ($block) {
+      blockName = $block.className;
+    }
+    if (!noButtonBlocks.includes(blockName) && a.href !== a.textContent) {
+      const up = a.parentElement;
+      const twoup = a.parentElement.parentElement;
+      if (!a.querySelector('img')) {
+        if (
+          up.childNodes.length === 1
+          && (up.tagName === 'P' || up.tagName === 'DIV')
+        ) {
+          a.className = 'button primary';
+          up.classList.add('button-container');
+        }
+        if (
+          up.childNodes.length === 1
+          && up.tagName === 'STRONG'
+          && twoup.childNodes.length === 1
+          && twoup.tagName === 'P'
+        ) {
+          a.className = 'button primary';
+          twoup.classList.add('button-container');
+        }
+        if (
+          up.childNodes.length === 1
+          && up.tagName === 'EM'
+          && twoup.childNodes.length === 1
+          && twoup.tagName === 'P'
+        ) {
+          a.className = 'button secondary';
+          twoup.classList.add('button-container');
+        }
+      }
+    }
+  });
 }
 
 /**
