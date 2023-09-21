@@ -1,27 +1,30 @@
-# Your Project's Title...
-Your project's description...
+# Project Helix Website
+[www.hlx.live](https://www.hlx.live)
 
-## Environments
-- Preview: https://main--salvasite-project-franklin--salvamolaso.hlx.page/
-- Live: https://main--salvasite-project-franklin--salvamolaso.hlx.live/
+[![codecov](https://codecov.io/gh/adobe/helix-website/branch/main/graph/badge.svg?token=If90y6KMqx)](https://codecov.io/gh/adobe/helix-website)
+## Introduction
+This repo is what powers the helix website.
 
-## Installation
+## Developing
+Install the Helix CLI:
 
-```sh
-npm i
-```
+    sudo npm install -g @adobe/helix-cli
+    
+Run it in this repo:
 
-## Tests
-https://main--salvasite-project-franklin--salvamolaso.hlx.page/
+    hlx up
+    
+## Testing
+### Install dependencies:
 
-```sh
-npm tst
-```
+    npm install
+### Run tests:
 
-## Local development
+    npm test
+### Watch tests:
 
-1. Create a new repository based on the `helix-project-boilerplate` template and add a mountpoint in the `fstab.yaml`
-1. Add the [helix-bot](https://github.com/apps/helix-bot) to the repository
-1. Install the [Helix CLI](https://github.com/adobe/helix-cli): `npm install -g @adobe/helix-cli`
-1. Start Helix Pages Proxy: `hlx up` (opens your browser at `http://localhost:3000`)
-1. Open the `{repo}` directory in your favorite IDE and start coding :)
+    npm test:watch
+    
+This will run through all your tests, but then only run against any changed tests.
+
+
